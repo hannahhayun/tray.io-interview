@@ -1,0 +1,19 @@
+{
+  "name": "tray.io-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahhayun/tray.io-interview.git"
+  },
+  "author": "Hannah Jung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hannahhayun/tray.io-interview/issues"
+  },
+  "homepage": "https://github.com/hannahhayun/tray.io-interview#readme"
+}
