@@ -18,13 +18,13 @@ fs.readFile(filename, 'utf8', function(err, data) {
 
     // - driving instructions
     var navigation = Array.from(lines.pop());
-    
     // check if all letters are within NSEW
     if (!/^([NSEW]*)$/.test(navigation.join(""))) {
         console.log("Invalid driving instructions. Please check again.");
         process.exit(1);
     }
 
+    // - room dimensions
     var room = lines.shift().split(" ").map((i) => Number(i));
     // check if room dimensions are valid
     if (hasNaN(room)) {
@@ -32,6 +32,7 @@ fs.readFile(filename, 'utf8', function(err, data) {
         process.exit(1);
     }
 
+    // - hoover position
     var pos = lines.shift().split(" ").map((i) => Number(i));
     // check if hoover position is valid
     if (hasNaN(pos)) {
@@ -39,6 +40,7 @@ fs.readFile(filename, 'utf8', function(err, data) {
         process.exit(1);
     }
 
+    // - dirt patches
     var dirts = Array();
     for (i in lines) {
         dirts.push(lines[i].split(" ").map((i) => Number(i)));
@@ -50,6 +52,7 @@ fs.readFile(filename, 'utf8', function(err, data) {
     }
 
     // Navigate and clean dirts
+    
     var x = pos[0];
     var y = pos[1];
     var clean = 0;
